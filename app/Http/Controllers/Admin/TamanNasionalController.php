@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Mitra;
 use Illuminate\Http\Request;
 use App\Models\Taman;
 
@@ -22,7 +23,8 @@ class TamanNasionalController extends Controller
      */
     public function create()
     {
-        return view('admin.taman_nasional.create');
+        $data["list_mitra"] = Mitra::all();
+        return view('admin.taman_nasional.create', $data);
     }
 
     /**
@@ -32,6 +34,7 @@ class TamanNasionalController extends Controller
     {
         $taman = new Taman;
         $taman->nama = request('nama');
+        $taman->id_mitra = request('id_mitra');
         $taman->deskripsi = request('deskripsi');
         $taman->alamat = request('alamat');
         $taman->nama_pengelola = request('nama_pengelola');
@@ -43,6 +46,7 @@ class TamanNasionalController extends Controller
         $taman->sumber_foto = request('sumber_foto');
         $taman->lat = request('lat');
         $taman->lng = request('lng');
+        $taman->status = 2;
         $taman->handleUploadFoto();
         $taman->handleUploadFoto1();
         $taman->handleUploadFoto2();
@@ -66,6 +70,7 @@ class TamanNasionalController extends Controller
      */
     public function edit($taman)
     {
+        $data["list_mitra"] = Mitra::all();
         $data['taman'] = Taman::find($taman);
 
         return view('admin.taman_nasional.edit', $data);
@@ -78,6 +83,7 @@ class TamanNasionalController extends Controller
     {
         $taman = Taman::find($taman);
         $taman->nama = request('nama');
+        $taman->id_mitra = request('id_mitra');
         $taman->deskripsi = request('deskripsi');
         $taman->nama_pengelola = request('nama_pengelola');
         $taman->no_pengelola = request('no_pengelola');
@@ -109,5 +115,21 @@ class TamanNasionalController extends Controller
         $taman->handleDelete();
         $taman->delete();
         return back()->with('danger', 'Data Berhasil di Hapus');
+    }
+    
+    public function rekomendasi($taman) {
+        $taman = Taman::find($taman);
+        $taman->rekomendasi = 2;
+        $taman->save();
+
+        return back()->with('success', 'Rekomendasi Berhasil Di Berikan');
+    }
+
+    public function hapusrekomendasi($taman) {
+        $taman = Taman::find($taman);
+        $taman->rekomendasi = 1;
+        $taman->save();
+
+        return back()->with('danger', 'Rekomendasi Berhasil Di Hapus');
     }
 }

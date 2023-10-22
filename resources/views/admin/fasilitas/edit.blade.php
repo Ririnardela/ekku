@@ -78,26 +78,31 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
+                            <label class="col-sm-2 col-form-label text-left"> Foto</label>
                             <div class="col-sm-4">
                                 <img src="{{ url("public/$fasilitas->foto") }}" style="width: 50%" class="avatar-img rounded">
                             </div>
                             <div class="col-sm-6">
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto }}">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
+
+                            <label class="col-sm-2 col-form-label text-left"> Foto 2</label>
                             <div class="col-sm-4">
-                                <img src="{{ url("public/$fasilitas->foto1") }}" style="width: 50%" class="avatar-img rounded">
+                                <img src="{{ url("public/$fasilitas->foto1") }}" style="width : 50%;"
+                                            class="rounded">
                             </div>
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto1 }}">
+                                <input type="file" class="form-control" name="foto1" value="{{ $fasilitas->foto1}}">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Poto</label>
+
+                            <label class="col-sm-2 col-form-label text-left"> Foto 3</label>
                             <div class="col-sm-4">
-                                <img src="{{ url("public/$fasilitas->foto2") }}" style="width: 50%" class="avatar-img rounded">
+                                <img src="{{ url("public/$fasilitas->foto2") }}" style="width : 50%;"
+                                            class="rounded">
                             </div>
+
                             <div class="col-sm-6">
-                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" value="{{ $fasilitas->foto2 }}">
+                                <input type="file" class="form-control" name="foto2" value="{{ $fasilitas->foto2 }}">
                             </div>
                         </div>
 
@@ -123,10 +128,20 @@
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-4">
                                 <div class="tinymce-wrap">
                                     <textarea class="form-control mt-15" rows="3" name="deskripsi">{{ $fasilitas->deskripsi }}</textarea>
                                 </div>
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Nama Mitra</label>
+                            <div class="col-sm-4">
+                                <select name="id_mitra" class="form-control">
+                                    @foreach ($list_mitra as $mitra)
+                                        <option @if ($mitra->id == $fasilitas->id_mitra) selected @endif
+                                            value="{{ $mitra->id }}">
+                                            {{ $mitra->nama }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 

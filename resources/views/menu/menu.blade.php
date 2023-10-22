@@ -36,7 +36,7 @@
 
         @foreach ($list_kategori_fasilitas as $kategori_fasilitas)
             <li>
-                <a href="{{ url('#') }}">
+                <a href="{{ url("dinas/fasilitas/$kategori_fasilitas->id") }}">
                     <i class="align-self-center menu-icon fa fa-list"></i>
                     <span>{{ $kategori_fasilitas->nama }}</span>
                 </a>

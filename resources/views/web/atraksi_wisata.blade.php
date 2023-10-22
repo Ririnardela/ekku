@@ -49,6 +49,7 @@
             </div>
             <div class="row mt-20">
                 @foreach ($list_atraksi_wisata as $atraksi_wisata)
+                @if ($atraksi_wisata->status == 2)
                     <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
                         <div class="post-wrap">
 
@@ -77,6 +78,7 @@
                         </div>
                         <hr class="grey-bg">
                     </div>
+                    @endif
                 @endforeach
             </div>
         </div>

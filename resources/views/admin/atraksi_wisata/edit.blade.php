@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group row">
-
+                            
                             <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
                             <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_buka" value="{{ $atraksi_wisata->jam_buka}}">
@@ -81,7 +81,7 @@
                                 <img src="{{ url("public/$atraksi_wisata->foto") }}" alt="" height="310"
                                             class="rounded">
                             </div>
-
+                            
                             <div class="col-sm-4">
                                 <input type="file" class="form-control" name="foto" value="{{ $atraksi_wisata->foto }}">
                             </div>
@@ -97,17 +97,27 @@
                                 <input type="text" class="form-control" name="lng" value="{{ $atraksi_wisata->lng }}">
                             </div>
                         </div>
-
+                        
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Deskripsi</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-4">
                                 <div class="tinymce-wrap">
                                     <textarea class="form-control mt-15" rows="3" name="deskripsi">{{ $atraksi_wisata->deskripsi }}</textarea>
                                 </div>
                             </div>
+                            <label class="col-sm-2 col-form-label text-left"> Nama Mitra</label>
+                            <div class="col-sm-4">
+                                <select name="id_mitra" class="form-control">
+                                    @foreach ($list_mitra as $mitra)
+                                        <option @if ($mitra->id == $atraksi_wisata->id_mitra) selected @endif
+                                            value="{{ $mitra->id }}">
+                                            {{ $mitra->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
 
-
+                        
                         <div class="form-group row mb-0">
                             <div class="col-sm-12">
                                 <button class="btn btn-primary float-right"><span class="fa fa-save"></span>

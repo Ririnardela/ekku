@@ -24,7 +24,7 @@
                             class="mdi mdi-chevron-right"></i></span></a>
                 @yield('dinas_fasilitas')
             </li>
-           
+            <x-layout.sidebar.menu-item url="dinas/taman-nasional" label="Taman Nasional" icon="fa fa-fan" />
 
         </ul>
 

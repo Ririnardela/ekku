@@ -15,9 +15,13 @@ class Fasilitas extends Model
         return $this->belongsTo(KategoriFasilitas::class, 'id_kategori_fasilitas');
     }
 
+    public function Mitra()
+    {
+        return $this->belongsTo(Mitra::class, 'id_mitra');
+    }
+
     function handleUploadFoto()
     {
-        $this->handleDelete();
         if (request()->hasFile('foto')) {
             $foto = request()->file('foto');
             $destination = "Fasilitas";
@@ -27,9 +31,10 @@ class Fasilitas extends Model
             $this->foto = "app/" . $url;
         }
     }
+
     function handleUploadFoto1()
     {
-        $this->handleDelete1();
+
         if (request()->hasFile('foto1')) {
             $foto1 = request()->file('foto1');
             $destination = "Fasilitas";
@@ -41,7 +46,6 @@ class Fasilitas extends Model
     }
     function handleUploadFoto2()
     {
-        $this->handleDelete2();
         if (request()->hasFile('foto2')) {
             $foto2 = request()->file('foto2');
             $destination = "Fasilitas";

@@ -20,6 +20,7 @@
                                 <th class="text-center">Nama Pengelola</th>
                                 <th class="text-center">Hari Buka/ Jam Operasi</th>
                                 <th class="text-center">Destinasi</th>
+                                <th class="text-center">Status Atraksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +58,18 @@
                                     <td class="text-center">{{ $atraksi_wisata->nama_pengelola }}</td>
                                     <td class="text-center">{{ $atraksi_wisata->hari_buka }} / {{ $atraksi_wisata->jam_buka }} - {{ $atraksi_wisata->jam_tutup }}</td>
                                     <td class="text-center">{{ $atraksi_wisata->destinasi }}</td>
+                                    <td class="text-center">
+                                        @if ($atraksi_wisata->status == 1)
+                                            <p class="btn btn-primary"> Data Baru</p>
+                                        @endif
+                                        @if ($atraksi_wisata->status == 2)
+                                            <p class="btn btn-warning"> Di Setujui</p>
+                                        @endif
 
+                                        @if ($atraksi_wisata->status == 3)
+                                            <p class="btn btn-danger"> Di Batalkan</p>
+                                        @endif
+                                    </td>
                                 </tr>
                                 @endif
                             @endforeach

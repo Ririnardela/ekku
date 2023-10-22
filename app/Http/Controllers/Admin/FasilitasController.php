@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Fasilitas;
 use App\Models\KategoriFasilitas;
+use App\Models\Mitra;
 use Illuminate\Http\Request;
 
 class FasilitasController extends Controller
@@ -21,6 +22,7 @@ class FasilitasController extends Controller
     {
         $data["list_kategori_fasilitas"] = KategoriFasilitas::all();
         $data['kategori_fasilitas'] = KategoriFasilitas::find($kategorifasilitas);
+        $data["list_mitra"] = Mitra::all();
         return view('admin.fasilitas.create', $data);
     }
 
@@ -41,6 +43,7 @@ class FasilitasController extends Controller
         $fasilitas->lat = request('lat');
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
+        $fasilitas->status = 2;
         $fasilitas->handleUploadFoto();
         $fasilitas->handleUploadFoto1();
         $fasilitas->handleUploadFoto2();
@@ -60,6 +63,7 @@ class FasilitasController extends Controller
 
     public function edit($fasilitas)
     {
+        $data["list_mitra"] = Mitra::all();
         $data["list_kategori_fasilitas"] = KategoriFasilitas::all();
         $data['fasilitas'] = Fasilitas::find($fasilitas);
 

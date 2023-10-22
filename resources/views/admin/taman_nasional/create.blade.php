@@ -17,52 +17,66 @@
                                 <input type="text" class="form-control" name="nama"
                                     placeholder="Nama Taman Nasional">
                             </div>
+                            <label class="col-sm-2 col-form-label text-left">Nama Mitra</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" name="id_mitra">
+                                    <option value=""> Pilih Mitra</option>
+                                    @foreach ($list_mitra as $mitra)
+                                        <option value="{{ $mitra->id }}">{{ $mitra->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Link Taman</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="link"
                                     placeholder="Link Taman">
                             </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Pengelola</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama_pengelola"
                                     placeholder="Pengelola">
                             </div>
+                            
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Nara Hubung</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="no_pengelola"
                                     placeholder="Nara Hubung">
                             </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Alamat</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="alamat"
                                     placeholder="Alamat Taman Nasional">
                             </div>
+                           
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Sumber Foto</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="sumber_foto"
                                     placeholder="Sumber Foto">
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-1 col-form-label text-left"> Hari Buka</label>
-                            <div class="col-sm-3">
+                            <label class="col-sm-2 col-form-label text-left"> Hari Buka</label>
+                            <div class="col-sm-4">
                                 <input type="text" class="form-control" name="hari_buka"
                                     placeholder="Hari Buka">
                             </div>
-                            <label class="col-sm-1 col-form-label text-left"> Jam Buka</label>
-                            <div class="col-sm-3">
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
+                            <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_buka"
                                     placeholder="Jam Buka">
                             </div>
-                            <label class="col-sm-1 col-form-label text-left"> Jam Tutup</label>
-                            <div class="col-sm-3">
+                            <label class="col-sm-2 col-form-label text-left"> Jam Tutup</label>
+                            <div class="col-sm-4">
                                 <input type="time" class="form-control" name="jam_tutup"
                                     placeholder="Jam Tutup">
                             </div>

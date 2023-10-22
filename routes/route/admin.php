@@ -25,6 +25,8 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::resource('pengelola', PengelolaController::class);
 
     Route::resource('taman', TamanNasionalController::class);
+    Route::PUT('rekomendasi-taman/{taman}', [TamanNasionalController::class, 'rekomendasi']);
+    Route::PUT('hapus-rekomendasi-taman/{taman}', [TamanNasionalController::class, 'hapusrekomendasi']);
 
     Route::resource('desa-wisata', DesaWisataController::class);
 

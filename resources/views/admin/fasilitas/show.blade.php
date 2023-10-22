@@ -20,8 +20,8 @@
                                 <th class="text-center">Aksi</th>
                                 <th class="text-center">Nama Wisata</th>
                                 <th class="text-center">Nama Pengelola</th>
-                                <th class="text-center">Hari Buka/ Jam Operasi</th>
-                                
+                                <th class="text-center">Hari Buka/ Jam Operasi</th>                                    
+                                <th class="text-center">Status Fasilitas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,7 +41,18 @@
                                     <td class="text-center">{{ $fasilitas->nama }}</td>
                                     <td class="text-center">{{ $fasilitas->nama_pengelola }}</td>
                                     <td class="text-center">{{ $fasilitas->hari_buka }} / {{ $fasilitas->jam_buka }} - {{ $fasilitas->jam_tutup }}</td>
-                                    
+                                    <td class="text-center">
+                                        @if ($fasilitas->status == 1)
+                                            <p class="btn btn-primary"> Data Baru</p>
+                                        @endif
+                                        @if ($fasilitas->status == 2)
+                                            <p class="btn btn-warning"> Di Setujui</p>
+                                        @endif
+
+                                        @if ($fasilitas->status == 3)
+                                            <p class="btn btn-danger"> Di Batalkan</p>
+                                        @endif
+                                    </td>
 
                                 </tr>
                                 @endif

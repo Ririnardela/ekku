@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
 use App\Models\AtraksiWisata;
+use App\Models\Mitra;
 
 class AtraksiWisataController extends Controller
 {
@@ -19,6 +20,7 @@ class AtraksiWisataController extends Controller
     public function create()
     {
         $data["list_kategori"] = Kategori::all();
+        $data["list_mitra"] = Mitra::all();
         return view('admin.atraksi_wisata.create', $data);
     }
 
@@ -38,7 +40,8 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
-        $atraksi_wisata->rekomendasi = 1;
+        $atraksi_wisata->rekomendasi = 2;
+        $atraksi_wisata->status = 2;
         $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
@@ -57,7 +60,7 @@ class AtraksiWisataController extends Controller
     {
         $data["list_kategori"] = Kategori::all();
         $data['atraksi_wisata'] = AtraksiWisata::find($atraksi_wisata);
-
+        $data["list_mitra"] = Mitra::all();
         return view('admin.atraksi_wisata.edit', $data);
     }
 

@@ -18,7 +18,7 @@
                                 <th>Aksi</th>
                                 <th>Nama Taman Nasional</th>
                                 <th>Lokasi</th>
-
+                                <th class="text-center">Status Taman Nasional</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,11 +33,38 @@
                                                 id="{{ $taman->id }}" />
                                             <x-layout.button.delete-button url="admin/taman"
                                                 id="{{ $taman->id }}" />
+
+                                                @if ($taman->rekomendasi == 1)
+                                            <form action="{{url('admin/rekomendasi-taman', $taman->id)}}" method="POST">
+                                                @csrf
+                                                @method("PUT")
+                                                <button class="btn btn-success"><span class="fa fa-check"></span> Berikan Rekomendasi</button>
+                                                </form>
+                                            @endif
+
+                                            @if ($taman->rekomendasi == 2)
+                                            <form action="{{url('admin/hapus-rekomendasi-taman', $taman->id)}}" method="POST">
+                                                @csrf
+                                                @method("PUT")
+                                                <button class="btn btn-dark"><span class="fa fa-check"></span> Hapus Rekomendasi</button>
+                                                </form>
+                                            @endif
                                         </div>
                                     </td>
                                     <td>{{ $taman->nama }}</td>
                                     <td>{{ $taman->alamat }}</td>
+                                    <td class="text-center">
+                                        @if ($taman->status == 1)
+                                            <p class="btn btn-primary"> Data Baru</p>
+                                        @endif
+                                        @if ($taman->status == 2)
+                                            <p class="btn btn-warning"> Di Setujui</p>
+                                        @endif
 
+                                        @if ($taman->status == 3)
+                                            <p class="btn btn-danger"> Di Batalkan</p>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -4,7 +4,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <x-layout.button.back-button url="mitra/atraksi-wisata" />
+                    <x-layout.button.back-button url="mitra/atraksi-wisata/{{$kategori->id}}" />
 
                     <h3 class="text-center">Tambah Data Atraksi Wisata</h3>
                 </div>

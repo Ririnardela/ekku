@@ -21,62 +21,77 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <label class="col-sm-2 col-form-label text-left">Nama Mitra</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" name="id_mitra">
+                                    <option value=""> Pilih Mitra</option>
+                                    @foreach ($list_mitra as $mitra)
+                                        <option value="{{ $mitra->id }}">{{ $mitra->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Nama Wisata</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama"
                                     placeholder="Nama Wisata">
                             </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Alamat Wisata</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="alamat"
                                     placeholder="Alamat Wisata">
                             </div>
+                            
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Nama Pengelola</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="nama_pengelola"
                                     placeholder="Nama Pengelola">
                             </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Nomor Pengelola</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="no_pengelola" placeholder="Nomor Pengelola">
                             </div>
+                            
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Destinasi Wisata</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="destinasi" placeholder="Destinasi Wisata">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left"> Hari Buka</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" name="hari_buka"placeholder="Hari Buka">
-                            </div>
-                            <label class="col-sm-1 col-form-label text-left"> Jam Buka</label>
-                            <div class="col-sm-3">
-                                <input type="time" class="form-control" name="jam_buka"placeholder="Jam Buka">
-                            </div>
-                            <label class="col-sm-1 col-form-label text-left"> Jam Tutup</label>
-                            <div class="col-sm-3">
-                                <input type="time" class="form-control" name="jam_tutup" placeholder="Jam Tutup">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left"> Foto</label>
-                            <div class="col-sm-4">
-                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
                             </div>
                             <label class="col-sm-2 col-form-label text-left"> Sumber Foto</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="sumber_foto" placeholder="Sumber Foto">
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Hari Buka</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="hari_buka"placeholder="Hari Buka">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Foto</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Jam Buka</label>
+                            <div class="col-sm-4">
+                                <input type="time" class="form-control" name="jam_buka"placeholder="Jam Buka">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Jam Tutup</label>
+                            <div class="col-sm-4">
+                                <input type="time" class="form-control" name="jam_tutup" placeholder="Jam Tutup">
+                            </div>
+                        </div>
+
+                       
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Titik Latitude </label>
