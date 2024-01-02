@@ -29,11 +29,20 @@ class KalenderWisataController extends Controller
         $kalender_wisata = New KalenderWisata;
         $kalender_wisata->nama = request('nama');
         $kalender_wisata->deskripsi = request('deskripsi');
+        $kalender_wisata->event = request('event');
+        $kalender_wisata->deskripsi_event = request('deskripsi_event');
+        $kalender_wisata->penyelenggara_event = request('penyelenggara_event');
+        $kalender_wisata->transportasi = request('transportasi');
         $kalender_wisata->tempat = request('tempat');
         $kalender_wisata->tanggal = request('tanggal');
         $kalender_wisata->id_bulan = request('id_bulan');
+        $kalender_wisata->link_event = request('link_event');
+        $kalender_wisata->lat = request('lat');
+        $kalender_wisata->lng = request('lng');
         $kalender_wisata->sumber_foto = request('sumber_foto');
         $kalender_wisata->handleUploadFoto();
+        $kalender_wisata->handleUploadFoto1();
+        $kalender_wisata->handleUploadFoto2();
         $kalender_wisata->save();
 
         return redirect('admin/kalender-wisata')->with('primary', 'Data Berhasil Ditambahkan');
@@ -69,11 +78,20 @@ class KalenderWisataController extends Controller
         $kalender_wisata = KalenderWisata::find($kalender_wisata);
         $kalender_wisata->nama = request('nama');
         $kalender_wisata->deskripsi = request('deskripsi');
+        $kalender_wisata->event = request('event');
+        $kalender_wisata->deskripsi_event = request('deskripsi_event');
+        $kalender_wisata->penyelenggara_event = request('penyelenggara_event');
+        $kalender_wisata->transportasi = request('transportasi');
         $kalender_wisata->tempat = request('tempat');
         $kalender_wisata->tanggal = request('tanggal');
         $kalender_wisata->id_bulan = request('id_bulan');
+        $kalender_wisata->link_event = request('link_event');
+        $kalender_wisata->lat = request('lat');
+        $kalender_wisata->lng = request('lng');
         $kalender_wisata->sumber_foto = request('sumber_foto');
         if (request('foto')) $kalender_wisata->handleUploadFoto();
+        if (request('foto1')) $kalender_wisata->handleUploadFoto1();
+        if (request('foto2')) $kalender_wisata->handleUploadFoto2();
         $kalender_wisata->save();
 
         return redirect('admin/kalender-wisata')->with('primary', 'Data Berhasil Diedit');

@@ -25,6 +25,15 @@
                                                 Alamat Wisata
                                             </li>
                                             <li class="">
+                                                Atraksi wisata
+                                            </li>
+                                            <li class="">
+                                                Paket Wisata
+                                            </li>
+                                            <li class="">
+                                                Fasilitas
+                                            </li>
+                                            <li class="">
                                                 Nama Pengelola
                                             </li>
                                             <li class="">
@@ -44,6 +53,15 @@
                                             </li>
                                             <li class="">
                                                 : {{ $atraksi_wisata->alamat }}
+                                            </li>
+                                            <li class="">
+                                                : {{ $atraksi_wisata->atraksi_wisata }}
+                                            </li>
+                                            <li class="">
+                                                : {{ $atraksi_wisata->paket_wisata }}
+                                            </li>
+                                            <li class="">
+                                                : {{ $atraksi_wisata->fasilitas }}
                                             </li>
                                             <li class="">
                                                 : {{ $atraksi_wisata->nama_pengelola }}

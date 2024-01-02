@@ -8,7 +8,7 @@ use App\Models\Kategori;
 use App\Models\KategoriFasilitas;
 use Illuminate\Http\Request;
 
-class AmenitasController extends Controller
+class FasilitasController extends Controller
 {
     public function index($kategori_fasilitas)
     {

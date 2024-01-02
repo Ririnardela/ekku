@@ -42,6 +42,27 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Ataksi Wisata</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="atraksi_wisata"
+                                value="{{ $atraksi_wisata->atraksi_wisata }}">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left">Paket Wisata</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="paket_wisata"
+                                value="{{ $atraksi_wisata->paket_wisata }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Fasilitas</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="fasilitas"
+                                value="{{ $atraksi_wisata->fasilitas }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Nomor Pengelola</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="no_pengelola" value="{{ $atraksi_wisata->no_pengelola }}">

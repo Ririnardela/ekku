@@ -28,8 +28,12 @@ class AtraksiWisataController extends Controller
     {
         $atraksi_wisata =New AtraksiWisata;
         $atraksi_wisata->id_kategori = request('id_kategori');
+        $atraksi_wisata->id_mitra = request('id_mitra');
         $atraksi_wisata->nama = request('nama');
         $atraksi_wisata->alamat = request('alamat');
+        $atraksi_wisata->atraksi_wisata = request('atraksi_wisata');
+        $atraksi_wisata->paket_wisata = request('paket_wisata');
+        $atraksi_wisata->fasilitas = request('fasilitas');
         $atraksi_wisata->destinasi = request('destinasi');
         $atraksi_wisata->deskripsi = request('deskripsi');
         $atraksi_wisata->nama_pengelola = request('nama_pengelola');
@@ -45,6 +49,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 
+        $id = request('id');
         return redirect('admin/atraksi-wisata')->with('success', 'Data Berhasil Disimpan');
     }
 
@@ -68,6 +73,7 @@ class AtraksiWisataController extends Controller
     {
         $atraksi_wisata = AtraksiWisata::find($atraksi_wisata);
         $atraksi_wisata->id_kategori = request('id_kategori');
+        $atraksi_wisata->id_mitra = request('id_mitra');
         $atraksi_wisata->nama = request('nama');
         $atraksi_wisata->alamat = request('alamat');
         $atraksi_wisata->destinasi = request('destinasi');

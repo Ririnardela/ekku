@@ -135,6 +135,7 @@
                         <i class="icofont-look"></i> Lihat Detail
                     </a>
                 </button>
+                
                 <button class='btn btn-info'>
                     <a href='https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${dest_lat},${dest_long}' target='_blank'  style='color: white'>
                         <i class='icofont-location-arrow'></i> Rute

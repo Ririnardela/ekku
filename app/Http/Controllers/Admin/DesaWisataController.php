@@ -27,6 +27,7 @@ class DesaWisataController extends Controller
         $desa_wisata->nama_desa_wisata = request('nama_desa_wisata');
         $desa_wisata->deskripsi = request('deskripsi');
         $desa_wisata->link_jadesta = request('link_jadesta');
+        $desa_wisata->link_wisata = request('link_wisata');
         $desa_wisata->lat = request('lat');
         $desa_wisata->lng = request('lng');
         $desa_wisata->handleUploadFoto();
@@ -58,6 +59,7 @@ class DesaWisataController extends Controller
         $desa_wisata->nama_desa_wisata = request('nama_desa_wisata');
         $desa_wisata->deskripsi = request('deskripsi');
         $desa_wisata->link_jadesta = request('link_jadesta');
+        $desa_wisata->link_wisata = request('link_wisata');
         $desa_wisata->lat = request('lat');
         $desa_wisata->lng = request('lng');
         if (request('foto')) $desa_wisata->handleUploadFoto();

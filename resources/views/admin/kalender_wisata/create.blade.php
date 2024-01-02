@@ -17,9 +17,9 @@
                                 <input type="text" class="form-control" name="nama" placeholder="Nama Event">
                             </div>
 
-                            <label class="col-sm-2 col-form-label text-left">Tempat Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Alamat Event</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="tempat" placeholder="Tempat Event">
+                                <input type="text" class="form-control" name="tempat" placeholder="Alamat Event">
                             </div>
                         </div>
 
@@ -41,6 +41,34 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Event</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="event"
+                                    placeholder="event">
+                            </div>
+
+                            <label class="col-sm-2 col-form-label text-left">Deskripsi Event</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="deskripsi_event"
+                                    placeholder="Deskripsi Event">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Penyelenggara Event</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="penyelenggara_event"
+                                    placeholder="Penyelenggara Event">
+                            </div>
+
+                            <label class="col-sm-2 col-form-label text-left">Transportasi</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="transportasi"
+                                    placeholder="Transportasi">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Foto</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" required>
@@ -50,6 +78,39 @@
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="sumber_foto"
                                     placeholder="Sumber Foto">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Titik Latitude </label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="lat" placeholder="Titik Latitude">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left"> Titik Longitude</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="lng" placeholder="Titik Longitude">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Foto</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control" name="foto1" accept=".jpg, .png, .jpeg" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Foto</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Link View Event</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="link_event"
+                                    placeholder="Link View Event">
                             </div>
                         </div>
 

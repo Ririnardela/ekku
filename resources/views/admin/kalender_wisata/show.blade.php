@@ -49,7 +49,7 @@
                                                 : {{ $kalender_wisata->bulan->nama }}
                                             </li>
                                             <li class="">
-                                                : {{ $kalender_wisata->tahun }}
+                                                : {{ $kalender_wisata->tanggal }}
                                             </li>
                                             
 

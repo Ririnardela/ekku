@@ -15,7 +15,8 @@ Route::resource('/', WebDesaWisataController::class);
 Route::resource('desa-wisata', WebDesaWisataController::class);
 Route::resource('taman', WebTamanNasionalController::class);
 Route::resource('kontak-wisata', WebKontakWisataController::class);
-Route::resource('kalender-wisata', WebKalenderWisataController::class);
+Route::get('kalender-wisata', [WebKalenderWisataController::class, 'index']);
+Route::get('detail-kalender/{kalender}', [WebKalenderWisataController::class, 'show']);
 Route::resource('peta-wisata', WebPetaWisataController::class);
 Route::get('berita/{berita}', [WebKontakWisataController::class, 'show']);
 
@@ -23,4 +24,4 @@ Route::get('fasilitas/{kategori_fasilitas}',[WebFasilitasController::class,'inde
 Route::get('detail-fasilitas/{fasilitas}',[WebFasilitasController::class,'show']);
 
 Route::get('atraksi/{kategori}',[WebAtraksiWisataController::class,'index']);
-Route::get('atraksi-wisata/{atraksi_wisata}',[WebAtraksiWisataController::class,'show']);
+Route::get('atraksi-wisata/{atraksi_wisata}',[WebAtraksiWisataController::class,'show']); 

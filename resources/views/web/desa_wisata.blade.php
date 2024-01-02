@@ -24,12 +24,27 @@
 
     <section class="white-bg" id="about">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title">
                         <p>
-                            Silahkan KLIK pada nama desa wisata yang tersedia untuk menemukan beragam informasi paket
-                            wisata dan fasilitas pendukung lainnya.
+                            EXPLORE KAYONG UTARA, e-KKU (beta 1.0), adalah portal resmi informasi pariwisata dan desa wisata di Kabupaten Kayong Utara
+                            yang terintegrasi dengan sistem JADESTA (Jaringan Desa Wisata) Kemenparekraf RI. ​Website ini dikelola bersama oleh DPC MASATA
+                            Ketapang & Kayong Utara, Prodi Teknologi Informasi Politeknik Negeri Ketapang, dan Pemerintah Daerah Kabupaten Kayong Utara
+                            melalui Dinas Pemuda, Olahraga & Pariwisata.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="section-title">
+                        <p>
+                            Pada versi e-KKU 1.0 menyajikan informasi umum desa wisata dan destinasi pariwisata yang dapat dikunjungi di Kabupaten Kayong Utara.
+                            <br>Silahkan KLIK pada nama desa wisata yang tersedia untuk menemukan beragam informasi paket wisata dan fasilitas pendukung lainnya.
                         </p>
                     </div>
                 </div>
@@ -80,7 +95,9 @@
                                     </div>
                                     <div class="post-text">
                                         <h3><a
-                                                href="{{ url("$desa_wisata->link_jadesta") }}">{{ $desa_wisata->nama_desa_wisata }}</a>
+                                                href="{{ url("$desa_wisata->link_jadesta") }}">
+                                                {{ $desa_wisata->nama_desa_wisata }}
+                                                <p></a><a href="{{ url("$desa_wisata->link_wisata") }}" class="btn btn-success" target="_blank" title="Link Video Youtube"><i class="icofont-youtube"></i></span>VIEW WISATA</a>
                                         </h3>
                                         <p>
                                             {{ "$desa_wisata->deskripsi" }}

@@ -24,7 +24,7 @@
                         <div class="hero-text-wrap">
                             <center>
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/kku-white.pn"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
@@ -62,9 +62,9 @@
                                 <a href="{{url("detail-fasilitas/$fasilitas->id")}}">
                                {{ $fasilitas->nama }}
                                 </a>
-                                <p style="color: #f3dc0c">
+                                <p style="color: #007bff">
                                     @for ($i = 1; $i <= $fasilitas->rating; $i++)
-                                        <i class="icofont-star"></i>
+                                        <i class="icofont-thumbs-up"></i>
                                     @endfor
                                 </p>
                             </div>

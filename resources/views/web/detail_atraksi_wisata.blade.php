@@ -12,9 +12,7 @@
                     <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
                             class="font-100">Eksplore Kayong Utara</span></h5>
 
-                    <h5 class="font-20px white-color"><span class="font-100"></span><a
-                            href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
-                            href="{{ url("atraksi/$atraksi_wisata->id_kategori") }}"class="btn btn-success"> Kembali</a></h5>
+                    
                 </div>
             </div>
     </section>
@@ -52,6 +50,18 @@
                             </li>
                             <span>{{ $atraksi_wisata->alamat }}</span>
                             <li>
+                            <li><a style="color: black">Atraksi Wisata</a> :
+                            </li>
+                            <span>{{ $atraksi_wisata->atraksi_wisata }}</span>
+                            <li>
+                            <li><a style="color: black">Paket Wisata</a> :
+                            </li>
+                            <span>{{ $atraksi_wisata->paket_wisata }}</span>
+                            <li>
+                            <li><a style="color: black">Fasilitas</a> :
+                            </li>
+                            <span>{{ $atraksi_wisata->fasilitas }}</span>
+                            <li>
                             </li>
                             <li><a style="color: black">Aktivitas</a> :
                             </li>
@@ -59,6 +69,8 @@
                             <li><a style="color: black">Pengelola</a> :
                                 <span>{{ $atraksi_wisata->nama_pengelola }}</span>
                             </li>
+                              
+                            
                             <li><a style="color: black">Nara Hubung</a> :
                                 <span>{{ $atraksi_wisata->no_pengelola }}</span>
                             </li>
@@ -76,6 +88,9 @@
                 <p style="text-align: justify">
                     {{ $atraksi_wisata->deskripsi }}
                 </p>
+                <h5 class="font-20px white-color"><span class="font-100"></span><a
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
+                    href="{{ url("atraksi/$atraksi_wisata->id_kategori") }}"class="btn btn-success"> Kembali</a></h5>
             </div>
         </div>
     </section>

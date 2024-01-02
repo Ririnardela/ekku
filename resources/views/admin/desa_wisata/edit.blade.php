@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <x-layout.button.back-button url="admin/desa-wisata" />
 
-                    <h3 class="text-center">Edit Data Pengelola</h3>
+                    <h3 class="text-center">Edit Data Desa Wisata</h3>
                 </div>
                 <div class="card-body">
 
@@ -33,6 +33,13 @@
                             <label class="col-sm-2 col-form-label text-left"> Link Jadesta</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="link_jadesta" value="{{ $desa_wisata->link_jadesta }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Link Wisata</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="link_wisata" value="{{ $desa_wisata->link_wisata }}">
                             </div>
                         </div>
 

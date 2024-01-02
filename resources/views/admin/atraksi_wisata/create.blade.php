@@ -69,6 +69,24 @@
                                 <input type="text" class="form-control" name="sumber_foto" placeholder="Sumber Foto">
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left"> Atraksi Wisata</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="atraksi_wisata" placeholder="Atraksi Wisata">
+                            </div>
+                            <label class="col-sm-2 col-form-label text-left">Paket Wisata</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="paket_wisata" placeholder="Paket Wisata">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Fasilitas</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="fasilitas" placeholder="Fasilitas">
+                            </div>
+                        </div>
                         
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left"> Hari Buka</label>

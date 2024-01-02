@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Mitra\AtraksiWisataController;
+use App\Http\Controllers\Mitra\FasilitasController;
 use App\Http\Controllers\Mitra\MitraController;
 use App\Http\Controllers\Mitra\PengelolaTamanNasionalController;
 use Illuminate\Support\Facades\Route;

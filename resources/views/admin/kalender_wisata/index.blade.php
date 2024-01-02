@@ -46,7 +46,7 @@
                                     <td class="text-center">{{ $kalender_wisata->nama }}</td>
                                     <td class="text-center">{{ $kalender_wisata->tempat }}</td>
                                     <td class="text-center">{{ $kalender_wisata->bulan->nama }}</td>
-                                    <td class="text-center">{{ $kalender_wisata->tahun }}</td>
+                                    <td class="text-center">{{ $kalender_wisata->tanggal }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -66,7 +66,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ url('store-bulan') }}" method="POST">
+            <form action="{{ url('admin/store-bulan') }}" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="form-group row">

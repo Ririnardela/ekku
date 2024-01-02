@@ -16,7 +16,7 @@ class KalenderWisata extends Model
 
     function handleUploadFoto()
     {
-        $this->handleDelete();
+        // $this->handleDelete();
         if (request()->hasFile('foto')) {
             $foto = request()->file('foto');
             $destination = "Kalender-Wisata";
@@ -24,6 +24,36 @@ class KalenderWisata extends Model
             $filename = time() . "-"  . $randomStr . "."  . $foto->extension();
             $url = $foto->storeAs($destination, $filename);
             $this->foto = "app/" . $url;
+            $this->save();
+
+        }
+    }
+
+    function handleUploadFoto1()
+    {
+        // $this->handleDelete();
+        if (request()->hasFile('foto1')) {
+            $foto1 = request()->file('foto1');
+            $destination = "Kalender-Wisata";
+            $randomStr = Str::random(5);
+            $filename = time() . "-"  . $randomStr . "."  . $foto1->extension();
+            $url = $foto1->storeAs($destination, $filename);
+            $this->foto1 = "app/" . $url;
+            $this->save();
+
+        }
+    }
+
+    function handleUploadFoto2()
+    {
+        // $this->handleDelete();
+        if (request()->hasFile('foto2')) {
+            $foto2 = request()->file('foto2');
+            $destination = "Kalender-Wisata";
+            $randomStr = Str::random(5);
+            $filename = time() . "-"  . $randomStr . "."  . $foto2->extension();
+            $url = $foto2->storeAs($destination, $filename);
+            $this->foto2 = "app/" . $url;
             $this->save();
 
         }

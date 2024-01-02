@@ -30,6 +30,7 @@ class FasilitasController extends Controller
     {
         $fasilitas = new Fasilitas;
         $fasilitas->id_kategori_fasilitas = request('id_kategori_fasilitas');
+        $fasilitas->id_mitra = request('id_mitra');
         $fasilitas->nama = request('nama');
         $fasilitas->alamat = request('alamat');
         $fasilitas->deskripsi = request('deskripsi');
@@ -40,6 +41,7 @@ class FasilitasController extends Controller
         $fasilitas->jam_tutup = request('jam_tutup');
         $fasilitas->link = request('link');
         $fasilitas->rating = request('rating');
+        $fasilitas->fasilitas = request('fasilitas');
         $fasilitas->lat = request('lat');
         $fasilitas->lng = request('lng');
         $fasilitas->sumber_foto = request('sumber_foto');
@@ -66,6 +68,7 @@ class FasilitasController extends Controller
         $data["list_mitra"] = Mitra::all();
         $data["list_kategori_fasilitas"] = KategoriFasilitas::all();
         $data['fasilitas'] = Fasilitas::find($fasilitas);
+        
 
         return view('admin.fasilitas.edit', $data);
     }

@@ -1,5 +1,4 @@
 <x-web>
-
     @include('menu.menu')
     <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
@@ -26,7 +25,7 @@
                                 <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                <img src="{{ url('public/web') }}/assets/images/kku-white.pn"
+                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
@@ -39,49 +38,54 @@
         </div>
     </div>
 
-    <section class="white-bg" id="pricing">
-        <div class="container">
-            <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
-                <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten Kayong
-                    Utara
-                </strong>
-                <hr class="center_line grey-bg">
-            </div>
-            <div class="row mt-20">
-                @foreach ($list_atraksi_wisata as $atraksi_wisata)
-                @if ($atraksi_wisata->status == 2)
-                    <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="post-wrap">
+    <section id="blog" class="white-bg">
+        <section class="white-bg" id="pricing">
+            <div class="container">
+                <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
+                    <strong style="font-size: 20px; font-weight:bold; color:grey">{{ $kategori->nama }} Di Kabupaten
+                        Kayong Utara
+                    </strong>
+                    <hr class="center_line grey-bg">
+                </div>
+                <div class="row mt-50">
+                    @foreach ($list_atraksi_wisata as $atraksi_wisata)
+                        @if ($atraksi_wisata->status == 2)
+                            <div class="col-md-4 blog-list wow fadeInLeft" data-wow-delay="0.1s">
+                                <div class="post-wrap mb-30">
+                                    <div class="post-img">
+                                        <div class="date-box">
+                                            <span class="day">
+                                                @if ($atraksi_wisata->rekomendasi == 2)
+                                                    <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}"
+                                                        class="btn btn-light">
+                                                        <strong style="font-size: 15px; font-weight:bold;">
+                                                            <i style="color: blue">
+                                                                Rekomendasi</a>
+                                                @elseif ($atraksi_wisata->rekomendasi == 1)
+                                                @endif
+                                            </span>
+                                        </div>
+                                        <div class="item">
+                                            <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">
+                                                <img class="img-responsive"
+                                                    style="width:100% ; height:200px; object-fit: cover"
+                                                    src="{{ url("public/$atraksi_wisata->foto") }}" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
 
-                            <div class="post-img">
-                                <div class="item">
-                                    <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">
-                                        <img class="img-responsive" style="width:100% ; height:200px; object-fit: cover"
-                                            src="{{ url("public/$atraksi_wisata->foto") }}" alt="" />
-                                    </a>
+                                    <div class="post-text">
+                                        <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">
+                                            <p><strong
+                                                    style="font-size: 17px; font-weight:bold;">{{ $atraksi_wisata->nama }}
+                                            </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="post-text">
-                                <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">
-                                    <p>{{ $atraksi_wisata->nama }}</p>
-                                </a>
-                                @if ($atraksi_wisata->rekomendasi == 2)
-                                    <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}" class="btn btn-info"><span class="fa fa-info"></span>
-                                        Rekomendasi</a>
-                                
-                                @elseif ($atraksi_wisata->rekomendasi == 1)
-                                <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}" class="btn btn-danger"><span class="fa fa-info"></span>
-                                    Tidak Rekomendasi</a>
-                                @endif
-                            </div>
-
-                        </div>
-                        <hr class="grey-bg">
-                    </div>
-                    @endif
-                @endforeach
+                        @endif
+                    @endforeach
+                </div>
             </div>
-        </div>
+        </section>
     </section>
 </x-web>
-{{--

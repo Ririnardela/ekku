@@ -6,8 +6,8 @@
 
                 <div class="card-header">
 
-                    <a href="{{ url("dinas/atraksi-wisata/$kategori->id") }}/create" class="btn btn-primary float-right mb-10"> <span
-                            class="fa fa-plus"></span> Tambah Data</a>
+                    <a href="{{ url("dinas/atraksi-wisata/$kategori->id") }}/create" class=""> <span>
+                    </a>
                     <h3 class="text-center">Data Atraksi Wisata</h3>
 
                 </div>

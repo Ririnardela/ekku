@@ -72,7 +72,7 @@
 
         @foreach ($list_kategori_fasilitas as $kategori_fasilitas)
             <li>
-                <a href="{{ url("mitra/amenitas/$kategori_fasilitas->id") }}">
+                <a href="{{ url("mitra/fasilitas/$kategori_fasilitas->id") }}">
 
                     {{ $kategori_fasilitas->nama }}
                 </a>

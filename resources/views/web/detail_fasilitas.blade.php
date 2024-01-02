@@ -3,7 +3,7 @@
     @include('menu.menu')
 
     <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-        data-parallax-bg-image="{{ url('public/web') }}/assets/images/d.jpg" data-parallax-speed="0.5"
+        data-parallax-bg-image="{{ url('public/web') }}/assets/images/6.webp" data-parallax-speed="0.5"
         data-parallax-direction="up">
         <div class="overlay-bg"></div>
         <div class="container">
@@ -12,9 +12,7 @@
                     <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
                             class="font-100">Eksplore Kayong Utara</span></h5>
 
-                    <h5 class="font-20px white-color"><span class="font-100"></span><a
-                            href="{{ url('desa-wisata') }}">Dashboard</a> / <a
-                            href="{{ url("fasilitas/$fasilitas->id_kategori_fasilitas") }}"> Kembali</a></h5>
+
                 </div>
             </div>
     </section>
@@ -29,10 +27,38 @@
                                 <li>
                                     <div class="post-wrap">
                                         <div class="post-img">
+                                            <div class="blog-grid-slider slick">
+                                                <div class="item">
+                                                    <a class="image-popup-no-margins"
+                                                        href="{{ url("public/$fasilitas->foto") }}">
+                                                        <img class="img-responsive"
+                                                            style="width:100% ; height:50%; object-fit: cover"
+                                                            src="{{ url("public/$fasilitas->foto") }}"
+                                                            alt="Tidak Dapat Memuat Gambar" />
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a class="image-popup-no-margins"
+                                                        href="{{ url("public/$fasilitas->foto1") }}">
+                                                        <img class="img-responsive"
+                                                            style="width:100% ; height:50%; object-fit: cover"
+                                                            src="{{ url("public/$fasilitas->foto1") }}"
+                                                            alt="Tidak Dapat Memuat Gambar" />
+                                                    </a>
+                                                </div>
+                                                <div class="item">
+                                                    <a class="image-popup-no-margins"
+                                                        href="{{ url("public/$fasilitas->foto2") }}">
+                                                        <img class="img-responsive"
+                                                            style="width:100% ; height:50%; object-fit: cover"
+                                                            src="{{ url("public/$fasilitas->foto2") }}"
+                                                            alt="Tidak Dapat Memuat Gambar" />
+                                                    </a>
+                                                </div>
+                                            </div>
 
-                                            <img class="img-responsive" src="{{ url("public/$fasilitas->foto") }}"
-                                                style="width: 100%; height: 50%; object-fit: cover" alt="" />
                                         </div>
+
                                         <p class="text-right">Sumber Foto :
                                             <em>{{ $fasilitas->sumber_foto }}</em>
                                         </p>
@@ -48,14 +74,13 @@
                     <div class="sidebar_widget widget_archive ">
                         <h5 class="aside-title">Informasi</h5>
                         <ul>
+
                             <li><a style="color: black">Alamat</a> :
                             </li>
                             <span>{{ $fasilitas->alamat }}</span>
                             <li>
                             </li>
-                            <li><a style="color: black">Aktivitas</a> :
-                            </li>
-                            <span>{{ $fasilitas->destinasi }}</span>
+
                             <li><a style="color: black">Pengelola</a> :
                                 <span>{{ $fasilitas->nama_pengelola }}</span>
                             </li>
@@ -67,7 +92,19 @@
                             </li>
                             <li><a style="color: black">Jam Buka</a> : <span>{!! date('H:i', strtotime($fasilitas->jam_buka)) !!} -
                                     {!! date('H:i', strtotime($fasilitas->jam_tutup)) !!}</span></li>
+
+                            <a class="btn btn-md btn-dark-outline btn-square mt-10"
+                                href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a>
+
                         </ul>
+                        <div class="col-md-12">
+                            <h5 class="aside-title">fasilitas</h5>
+                        </div>
+
+                        <div class="col-md-12">
+                            <span>{!! $fasilitas->fasilitas !!}</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -77,6 +114,11 @@
                     {{ $fasilitas->deskripsi }}
                 </p>
             </div>
+
+            <h5 class="font-20px white-color"><span class="font-100"></span><a
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
+                    href="{{ url("fasilitas/$fasilitas->id_kategori_fasilitas") }}"class="btn btn-success"> Kembali</a>
+            </h5>
         </div>
     </section>
 </x-web>

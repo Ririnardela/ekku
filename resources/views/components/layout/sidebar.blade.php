@@ -43,6 +43,5 @@
             <x-layout.sidebar.menu-item url="admin/detail" label="Detail" icon="fa fa-info" />
 
         </ul>
-
     </div>
 </div>

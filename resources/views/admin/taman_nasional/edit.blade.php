@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <x-layout.button.back-button url="admin/taman" />
 
-                    <h3 class="text-center">Tambah Data Taman Nasional</h3>
+                    <h3 class="text-center">Edit Data Taman Nasional</h3>
                 </div>
                 <div class="card-body">
                     <form action="{{ url('admin/taman', $taman->id) }}" method="POST" enctype="multipart/form-data">

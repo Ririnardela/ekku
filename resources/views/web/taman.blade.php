@@ -84,7 +84,15 @@
                                     </div>
                                     <div class="post-text">
                                         <h3><a data-toggle="modal"
-                                                data-target="#exampleModalCenter{{ $taman->id }}">{{ $taman->nama }}</a>
+                                                data-target="#exampleModalCenter{{ $taman->id }}">{{ $taman->nama }}</p>
+                                            </a>
+                                                
+                                            @if ($taman->rekomendasi == 2)
+                                                <a href="{{ url("taman/$taman->id") }}"
+                                                    class="btn btn-info"><span class="fa fa-info"></span>
+                                                    Rekomendasi</a>
+                                            @elseif ($taman->rekomendasi == 1)
+                                            @endif
                                         </h3>
                                     </div>
                                 </div>
