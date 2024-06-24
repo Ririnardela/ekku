@@ -8,8 +8,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                    <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
-                            class="font-100">Eksplore Kayong Utara</span></h5>
+                    <div class="col-md-8 centerize-col">
+                        <div class="all-padding-50 text-center">
+                            <img src="{{ url('public/web') }}/assets/images/ekku11.png" alt=""
+                                style="width:100%; height:auto; object-fit: cover; ">
+                        </div>
                 </div>
             </div>
         </div>
@@ -56,8 +59,8 @@
                 @endforeach
             </div>
             <h5 class="font-20px white-color"><span class="font-100"></span><a
-                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
-                    href="{{ url('kontak-wisata') }}"class="btn btn-success"> Kembali</a>
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Home Page</a><a
+                    href="{{ url('kontak-wisata') }}"class="btn btn-success">Back</a>
             </h5>
         </div>
     </section>

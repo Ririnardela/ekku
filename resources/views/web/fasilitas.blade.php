@@ -15,7 +15,7 @@
                         data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
                         data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ url('public/web') }}/assets/images/4.webp" alt=""
+                        <img src="{{ url('public/web') }}/assets/images/pantai.jpg); height: 700px;" alt=""
                             data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                             data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -23,8 +23,8 @@
                         <!-- LAYER NR. 1 -->
                         <div class="hero-text-wrap">
                             <center>
-                                <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
-                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
+                                <h3 style="color: white; font-weight:10px; margin-top:50vh"></h3>
+                                <img src="{{ url('public/web') }}/assets/images/ekku11.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
@@ -62,15 +62,18 @@
                                 <a href="{{url("detail-fasilitas/$fasilitas->id")}}">
                                {{ $fasilitas->nama }}
                                 </a>
-                                <p style="color: #007bff">
+                                {{-- <p style="color: #007bff">
                                     @for ($i = 1; $i <= $fasilitas->rating; $i++)
                                         <i class="icofont-thumbs-up"></i>
                                     @endfor
-                                </p>
+                                </p> --}}
                             </div>
                             <div class="post-text">
                                 <p>{{ $fasilitas->alamat }}</p>
                             </div>
+                            <a href="{{ url("$fasilitas->link") }}" target="_blank"
+                                class="btn btn-info"  style="font-size: 8px;"><span class="fa fa-info"></span>
+                                Pemesanan Tempat</a>
                             <hr class="grey-bg">
                         </div>
                     </div>

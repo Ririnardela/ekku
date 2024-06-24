@@ -30,6 +30,7 @@ class KalenderWisataController extends Controller
         $kalender_wisata->nama = request('nama');
         $kalender_wisata->deskripsi = request('deskripsi');
         $kalender_wisata->event = request('event');
+        $kalender_wisata->tahun = request('tahun');
         $kalender_wisata->deskripsi_event = request('deskripsi_event');
         $kalender_wisata->penyelenggara_event = request('penyelenggara_event');
         $kalender_wisata->transportasi = request('transportasi');

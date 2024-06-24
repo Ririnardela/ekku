@@ -36,9 +36,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url('public/web') }}/assets/css/leaflet.defaultextent.css">
     <script src="{{ url('public/web') }}/assets/js/leaflet.defaultextent.js"></script>
 
+
     <link rel="stylesheet"
         href="{{ url('public/web') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.min.css" />
     <script src="{{ url('public/web') }}/assets/js/leaflet-panel-layers/dist/leaflet-panel-layers.src.js"></script>
+  
+    @stack('style')
 
 </head>
 
@@ -89,6 +92,7 @@
     <script src="{{ url('public/web') }}/revolution/js/revolution.extension.parallax.min.js"></script>
     <script src="{{ url('public/web') }}/revolution/js/revolution.extension.slideanims.min.js"></script>
     <script src="{{ url('public/web') }}/revolution/js/revolution.extension.video.min.js"></script>
+  
     <!--== Javascript Plugins End ==-->
 
     @stack('script')

@@ -20,10 +20,10 @@
             </button>
             <div class="logo">
                 <a href="#">
-                    <img class="logo logo-display" src="{{ url('public/web') }}/assets/images/kku-white.png"
-                        style="width:100 object-fit:contain" alt="">
-                    <img class="logo logo-scrolled" src="{{ url('public/web') }}/assets/images/kku-black.png"
-                        style="width:100 object-fit:contain" alt="">
+                    <img class="logo logo-display" src="{{ url('public/web/assets/images/ekku11.png') }}"
+                         width="300" height="200" alt="logo-display">
+                    <img class="logo logo-scrolled" src="{{ url('public/web/assets/images/ekku12.png') }}"
+                         width="300" height="200" alt="logo-scrolled">
                 </a>
             </div>
         </div>

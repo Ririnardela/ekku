@@ -24,13 +24,16 @@
                                                 Nama Event
                                             </li>
                                             <li class="">
-                                                Tempat Event
+                                                Alamat
                                             </li>
                                             <li class="">
-                                                Bulan Event
+                                                Penyelenggara Event
                                             </li>
                                             <li class="">
                                                 Tahun Event
+                                            </li>
+                                            <li class="">
+                                                Transportasi
                                             </li>
                                             
 
@@ -46,13 +49,15 @@
                                                 : {{ $kalender_wisata->tempat }}
                                             </li>
                                             <li class="">
-                                                : {{ $kalender_wisata->bulan->nama }}
+                                                : {{ $kalender_wisata->penyelenggara_event }}
                                             </li>
                                             <li class="">
                                                 : {{ $kalender_wisata->tanggal }}
                                             </li>
+                                            <li class="">
+                                                : {{ $kalender_wisata->transportasi }}
+                                            </li>
                                             
-
                                         </ul>
                                     </div>
                                 </div>

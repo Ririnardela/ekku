@@ -4,7 +4,7 @@
             <div class="page-title-box">
                 <div class="row">
                     <div class="col">
-                        <h4 class="page-title">Dashbord</h4>
+                        <h4 class="page-title">Dashboard</h4>
                     </div>
                     <div class="col-auto align-self-center">
                         <a href="#" class="btn btn-sm btn-outline-primary" id="Dash_Date">

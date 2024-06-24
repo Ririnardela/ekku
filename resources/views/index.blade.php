@@ -111,6 +111,9 @@
         color: #c59b08;
     }
 </style>
+
+
+
 @if (!empty($value->star_rating))
     <div class="container">
         <div class="row">

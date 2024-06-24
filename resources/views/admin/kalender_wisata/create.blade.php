@@ -34,17 +34,16 @@
                                 </select>
                             </div>
 
-                            <label class="col-sm-2 col-form-label text-left">Tanggal Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Waktu Event</label>
                             <div class="col-sm-4">
                                 <input type="date" class="form-control" name="tanggal" placeholder="Tanggal Event">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left">Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Tahun</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="event"
-                                    placeholder="event">
+                                <input type="text" class="form-control" name="tahun" placeholder="Tahun Event">
                             </div>
 
                             <label class="col-sm-2 col-form-label text-left">Deskripsi Event</label>
@@ -53,12 +52,12 @@
                                     placeholder="Deskripsi Event">
                             </div>
                         </div>
-
+                       
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left">Penyelenggara Event</label>
+                            <label class="col-sm-2 col-form-label text-left">Event</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" name="penyelenggara_event"
-                                    placeholder="Penyelenggara Event">
+                                <input type="text" class="form-control" name="event"
+                                    placeholder="event">
                             </div>
 
                             <label class="col-sm-2 col-form-label text-left">Transportasi</label>
@@ -69,11 +68,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label text-left">Foto</label>
+                            <label class="col-sm-2 col-form-label text-left">Penyelenggara Event</label>
                             <div class="col-sm-4">
-                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" required>
+                                <input type="text" class="form-control" name="penyelenggara_event"
+                                    placeholder="Penyelenggara Event">
                             </div>
+                        </div>
 
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Sumber Foto</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="sumber_foto"
@@ -103,6 +105,13 @@
                             <label class="col-sm-2 col-form-label text-left">Foto</label>
                             <div class="col-sm-4">
                                 <input type="file" class="form-control" name="foto2" accept=".jpg, .png, .jpeg" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Foto</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control" name="foto" accept=".jpg, .png, .jpeg" required>
                             </div>
                         </div>
 

@@ -3,8 +3,9 @@
     <div class="brand">
         <a href="dashboard/crm-index.html" class="logo">
             <span>
-                <img src="{{ url('public/admin') }}/assets/images/kku-white.png" alt="logo-small" class="logo-sm">
+                <img src="{{ url('public/admin/assets/images/ekku-putih.png') }}" alt="logo-small" class="logo-sm" width="200" height="100">
             </span>
+
 
         </a>
     </div>
@@ -37,11 +38,12 @@
                     <x-layout.sidebar.menu-item url="admin/fasilitas" label="Fasilitas" icon="fa fa-hotel" />
                 </ul>
             </li>
-            <x-layout.sidebar.menu-item url="admin/kalender-wisata" label="Kalender Wisata" icon="fa fa-calendar" />
+            <x-layout.sidebar.menu-item url="admin/kalender-wisata" label="Event" icon="fa fa-calendar" />
             <x-layout.sidebar.menu-item url="admin/kontak" label="Kontak" icon="fa fa-phone" />
             <x-layout.sidebar.menu-item url="admin/berita" label="Berita" icon="fa fa-envelope" />
-            <x-layout.sidebar.menu-item url="admin/detail" label="Detail" icon="fa fa-info" />
 
+            {{-- <x-layout.sidebar.menu-item url="admin/detail" label="Detail" icon="fa fa-info" /> --}}
+        
         </ul>
     </div>
 </div>

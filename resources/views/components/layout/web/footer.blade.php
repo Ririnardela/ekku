@@ -7,9 +7,10 @@
                         <span class="primary-color">EKSPLORE KAYONG UTARA </span> by Teknologi Informasi
                     </div>
                     <ul class="" style="text-align: center">
-                        <img src="{{url('public/web')}}/assets/images/Logo Politap.png" style="height: 5%; width: 5%;" alt="">
-                        <img src="{{url('public/web')}}/assets/images/ti.png" style="height: 5%; width: 5%;" alt="">
-                        <img src="{{url('public/web')}}/assets/images/masata.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/pemdakku.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/Logo.politap.png" style="height: 5%; width: 5%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/ti.png" style="height: 5%; width: 6.2%;" alt="">
+                        <img src="{{url('public/web')}}/assets/images/masata1.png" style="height: 5%; width: 7.5%;" alt="">
                     </ul>
                 </div>
             </div>

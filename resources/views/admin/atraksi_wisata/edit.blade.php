@@ -67,7 +67,7 @@
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="no_pengelola" value="{{ $atraksi_wisata->no_pengelola }}">
                             </div>
-                            <label class="col-sm-2 col-form-label text-left"> Destinasi Wisata</label>
+                            <label class="col-sm-2 col-form-label text-left"> Aktivitas</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="destinasi" value="{{ $atraksi_wisata->destinasi}}">
                             </div>

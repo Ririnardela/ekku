@@ -27,6 +27,7 @@ class KontakController extends Controller
         $kontak_wisata = New KontakWisata;
         $kontak_wisata->nama = request('nama');
         $kontak_wisata->jabatan = request('jabatan');
+        $kontak_wisata->tugas = request('tugas');
         $kontak_wisata->link_wa = request('link_wa');
         $kontak_wisata->link_fb = request('link_fb');
         $kontak_wisata->link_ig = request('link_ig');
@@ -56,9 +57,11 @@ class KontakController extends Controller
         $kontak_wisata = KontakWisata::find($kontak_wisata);
         $kontak_wisata->nama = request('nama');
         $kontak_wisata->jabatan = request('jabatan');
+        $kontak_wisata->tugas = request('tugas');
         $kontak_wisata->link_wa = request('link_wa');
         $kontak_wisata->link_fb = request('link_fb');
         $kontak_wisata->link_ig = request('link_ig');
+        $kontak_wisata->status = request('status');
         if (request('foto')) $kontak_wisata->handleUploadFoto();
         $kontak_wisata->save();
 

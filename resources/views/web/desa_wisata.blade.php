@@ -3,7 +3,7 @@
     @include('menu.menu')
 
     <section class="xxl-screen pt-0 pb-0 bg-flex-cover" id="home"
-        style="background-image: url(public/web/assets/images/2.jpg);">
+        style="background-image: url(public/web/assets/images/pelapis.jpg); height: 700px;">
         <div class="hero-text-wrap xxl-screen">
             <div class="hero-text">
                 <div class="text-content-slider slick">
@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col-md-8 centerize-col">
                                 <div class="all-padding-50 text-center">
-                                    <img src="{{ url('public/web') }}/assets/images/kku-white.png" alt=""
+                                    <img src="{{ url('public/web') }}/assets/images/ekku11.png" alt=""
                                         style="width:100%; height:auto; object-fit: cover; ">
                                 </div>
                             </div>
@@ -29,7 +29,7 @@
                 <div class="col-md-10 centerize-col text-center wow fadeInUp" data-wow-delay="0.1s">
                     <div class="section-title">
                         <p>
-                            EXPLORE KAYONG UTARA, e-KKU (beta 1.0), adalah portal resmi informasi pariwisata dan desa wisata di Kabupaten Kayong Utara
+                            EKSPLORE KAYONG UTARA, EKU (beta 1.0), adalah portal resmi informasi pariwisata dan desa wisata di Kabupaten Kayong Utara
                             yang terintegrasi dengan sistem JADESTA (Jaringan Desa Wisata) Kemenparekraf RI. ​Website ini dikelola bersama oleh DPC MASATA
                             Ketapang & Kayong Utara, Prodi Teknologi Informasi Politeknik Negeri Ketapang, dan Pemerintah Daerah Kabupaten Kayong Utara
                             melalui Dinas Pemuda, Olahraga & Pariwisata.
@@ -67,16 +67,17 @@
                                     <div class="blog-grid-slider slick">
                                         <div class="item">
                                             <a class="image-popup-no-margins"
-                                                href="{{ url("public/$desa_wisata->foto") }}">
+                                                href="{{ url("$desa_wisata->link_jadesta") }}" target="_blank">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$desa_wisata->foto") }}"
                                                     alt="Tidak Dapat Memuat Gambar" />
+                                                
                                             </a>
                                         </div>
                                         <div class="item">
                                             <a class="image-popup-no-margins"
-                                                href="{{ url("public/$desa_wisata->foto1") }}">
+                                                href="{{ url("$desa_wisata->link_jadesta") }}" target="_blank">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$desa_wisata->foto1") }}"
@@ -85,7 +86,7 @@
                                         </div>
                                         <div class="item">
                                             <a class="image-popup-no-margins"
-                                                href="{{ url("public/$desa_wisata->foto2") }}">
+                                                href="{{ url("$desa_wisata->link_jadesta") }}" target="_blank">
                                                 <img class="img-responsive"
                                                     style="width:100% ; height:300px; object-fit: cover"
                                                     src="{{ url("public/$desa_wisata->foto2") }}"
@@ -95,9 +96,14 @@
                                     </div>
                                     <div class="post-text">
                                         <h3><a
-                                                href="{{ url("$desa_wisata->link_jadesta") }}">
+                                                href="{{ url("$desa_wisata->link_jadesta") }}" target="_blank">
                                                 {{ $desa_wisata->nama_desa_wisata }}
-                                                <p></a><a href="{{ url("$desa_wisata->link_wisata") }}" class="btn btn-success" target="_blank" title="Link Video Youtube"><i class="icofont-youtube"></i></span>VIEW WISATA</a>
+                                                <p>
+                                            </a>
+                                            <a href="{{ url("$desa_wisata->link_wisata") }}"
+                                                     class="btn btn-success" target="_blank" title="Link Video Youtube" style="font-size: 8px;">
+                                                     <i class="icofont-youtube">
+                                                        </i>VIDEO WISATA</a>
                                         </h3>
                                         <p>
                                             {{ "$desa_wisata->deskripsi" }}

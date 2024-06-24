@@ -34,7 +34,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->atraksi_wisata = request('atraksi_wisata');
         $atraksi_wisata->paket_wisata = request('paket_wisata');
         $atraksi_wisata->fasilitas = request('fasilitas');
-        $atraksi_wisata->destinasi = request('destinasi');
+        $atraksi_wisata->aktivitas = request('aktivitas');
         $atraksi_wisata->deskripsi = request('deskripsi');
         $atraksi_wisata->nama_pengelola = request('nama_pengelola');
         $atraksi_wisata->no_pengelola = request('no_pengelola');
@@ -44,6 +44,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
+        $atraksi_wisata->deskripsi = request('deskripsi');
         $atraksi_wisata->rekomendasi = 2;
         $atraksi_wisata->status = 2;
         $atraksi_wisata->handleUploadFoto();
@@ -76,7 +77,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->id_mitra = request('id_mitra');
         $atraksi_wisata->nama = request('nama');
         $atraksi_wisata->alamat = request('alamat');
-        $atraksi_wisata->destinasi = request('destinasi');
+        $atraksi_wisata->aktivitas = request('aktivitas');
         $atraksi_wisata->deskripsi = request('deskripsi');
         $atraksi_wisata->nama_pengelola = request('nama_pengelola');
         $atraksi_wisata->no_pengelola = request('no_pengelola');
@@ -86,6 +87,7 @@ class AtraksiWisataController extends Controller
         $atraksi_wisata->lat = request('lat');
         $atraksi_wisata->lng = request('lng');
         $atraksi_wisata->sumber_foto = request('sumber_foto');
+        $atraksi_wisata->deskripsi = request('deskripsi');
         if (request('foto')) $atraksi_wisata->handleUploadFoto();
         $atraksi_wisata->save();
 

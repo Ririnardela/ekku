@@ -16,17 +16,24 @@
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="nama" placeholder="Nama Penanggung Jawab">
                             </div>
-
-
                         </div>
+
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Jabatan Penanggung Jawab</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" name="jabatan" placeholder="Jabatan Penanggung Jawab">
                             </div>
-
                         </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Tugas Penanggung Jawab</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="tugas" placeholder="Tugas Penanggung Jawab">
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Nama Akun/Link Akun Sosmed Whatsapp</label>

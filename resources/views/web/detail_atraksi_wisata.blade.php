@@ -3,16 +3,18 @@
     @include('menu.menu')
 
     <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-        data-parallax-bg-image="{{ url('public/web') }}/assets/images/6.webp" data-parallax-speed="0.5"
+        data-parallax-bg-image="{{ url('public/web') }}/assets/images/dw.jpg" data-parallax-speed="0.5"
         data-parallax-direction="up">
         <div class="overlay-bg"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                    <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
-                            class="font-100">Eksplore Kayong Utara</span></h5>
-
-                    
+                    <div class="col-md-8 centerize-col">
+                        <div class="all-padding-50 text-center">
+                            <img src="{{ url('public/web') }}/assets/images/ekku11.png" alt=""
+                                style="width:100%; height:auto; object-fit: cover; ">
+                        </div>
+                    </div>
                 </div>
             </div>
     </section>
@@ -58,6 +60,9 @@
                             </li>
                             <span>{{ $atraksi_wisata->paket_wisata }}</span>
                             <li>
+                            <li><a style="color: black">Nara Hubung</a> :
+                            </li>
+                            <span>{{ $atraksi_wisata->no_pengelola }}</span>
                             <li><a style="color: black">Fasilitas</a> :
                             </li>
                             <span>{{ $atraksi_wisata->fasilitas }}</span>
@@ -65,15 +70,11 @@
                             </li>
                             <li><a style="color: black">Aktivitas</a> :
                             </li>
-                            <span>{{ $atraksi_wisata->destinasi }}</span>
-                            <li><a style="color: black">Pengelola</a> :
+                            <span>{{ $atraksi_wisata->aktivitas }}</span>
+                            {{-- <li><a style="color: black">Pengelola</a> :
                                 <span>{{ $atraksi_wisata->nama_pengelola }}</span>
-                            </li>
-                              
+                            </li> --}}
                             
-                            <li><a style="color: black">Nara Hubung</a> :
-                                <span>{{ $atraksi_wisata->no_pengelola }}</span>
-                            </li>
                             <li><a style="color: black">Hari Buka</a> :
                                 <span>{{ $atraksi_wisata->hari_buka }}</span>
                             </li>
@@ -89,8 +90,8 @@
                     {{ $atraksi_wisata->deskripsi }}
                 </p>
                 <h5 class="font-20px white-color"><span class="font-100"></span><a
-                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
-                    href="{{ url("atraksi/$atraksi_wisata->id_kategori") }}"class="btn btn-success"> Kembali</a></h5>
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Halaman Utama</a><a
+                    href="{{ url("atraksi/$atraksi_wisata->id_kategori") }}"class="btn btn-success">Kembali</a></h5>
             </div>
         </div>
     </section>

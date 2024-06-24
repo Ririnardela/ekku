@@ -3,16 +3,17 @@
     @include('menu.menu')
 
     <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-        data-parallax-bg-image="{{ url('public/web') }}/assets/images/6.webp" data-parallax-speed="0.5"
+        data-parallax-bg-image="{{ url('public/web') }}/assets/images/1.jpg" data-parallax-speed="0.5"
         data-parallax-direction="up">
         <div class="overlay-bg"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                    <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
-                            class="font-100">Eksplore Kayong Utara</span></h5>
-
-
+                    <div class="col-md-8 centerize-col">
+                        <div class="all-padding-50 text-center">
+                            <img src="{{ url('public/web') }}/assets/images/ekku11.png" alt=""
+                                style="width:100%; height:auto; object-fit: cover; ">
+                        </div>
                 </div>
             </div>
     </section>
@@ -74,7 +75,8 @@
 
                         <h5 class="aside-title">Informasi</h5>
                         <p><a href="{{ url("$kalender_wisata->link_event") }}" class="btn btn-success" target="_blank"
-                                title="Link Video Youtube"><i class="icofont-youtube"></i>VIEW EVENT</a>
+                                title="Link Video Youtube" style="font-size: 7px;">
+                                <i class="icofont-youtube"></i>VIDEO EVENT</a>
                         <ul>
 
                             <li><a style="color: black">Event</a> :
@@ -113,8 +115,8 @@
             </div>
 
             <h5 class="font-20px white-color"><span class="font-100"></span><a
-                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
-                    href="{{ url('kalender-wisata') }}"class="btn btn-success"> Kembali</a>
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Halaman Utama</a><a
+                    href="{{ url('kalender-wisata') }}"class="btn btn-success">Kembali</a>
             </h5>
         </div>
     </section>

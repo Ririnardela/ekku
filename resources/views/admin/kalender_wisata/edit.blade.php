@@ -55,6 +55,13 @@
                         </div>
 
                         <div class="form-group row">
+                            <label class="col-sm-2 col-form-label text-left">Tahun</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="tahun" placeholder="Tahun Event">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label text-left">Penyelenggara Event</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" name="penyelenggara_event"

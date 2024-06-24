@@ -3,16 +3,17 @@
     @include('menu.menu')
 
     <section class="parallax-bg fixed-bg sm-pb-80 sm-pt-80"
-        data-parallax-bg-image="{{ url('public/web') }}/assets/images/6.webp" data-parallax-speed="0.5"
+        data-parallax-bg-image="{{ url('public/web') }}/assets/images/dw.jpg" data-parallax-speed="0.5"
         data-parallax-direction="up">
         <div class="overlay-bg"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 centerize-col text-center">
-                    <h5 class="font-50px white-color font-800 wow fadeInUp" data-wow-delay="0.1s"><span
-                            class="font-100">Eksplore Kayong Utara</span></h5>
-
-
+                    <div class="col-md-8 centerize-col">
+                        <div class="all-padding-50 text-center">
+                            <img src="{{ url('public/web') }}/assets/images/ekku11.png" alt=""
+                                style="width:100%; height:auto; object-fit: cover; ">
+                        </div>
                 </div>
             </div>
     </section>
@@ -81,12 +82,12 @@
                             <li>
                             </li>
 
-                            <li><a style="color: black">Pengelola</a> :
+                            {{-- <li><a style="color: black">Pengelola</a> :
                                 <span>{{ $fasilitas->nama_pengelola }}</span>
-                            </li>
+                            </li> --}}
                             <li><a style="color: black">Nara Hubung</a> :
-                                <span>{{ $fasilitas->no_pengelola }}</span>
                             </li>
+                            <span>{{ $fasilitas->no_pengelola }}</span>
                             <li><a style="color: black">Hari Buka</a> :
                                 <span>{{ $fasilitas->hari_buka }}</span>
                             </li>
@@ -94,7 +95,7 @@
                                     {!! date('H:i', strtotime($fasilitas->jam_tutup)) !!}</span></li>
 
                             <a class="btn btn-md btn-dark-outline btn-square mt-10"
-                                href="{{ url("$fasilitas->link") }}">Pemesanan tempat</a>
+                                href="{{ url("$fasilitas->link") }}" target="_blank" >Pemesanan tempat</a>
 
                         </ul>
                         <div class="col-md-12">
@@ -116,8 +117,8 @@
             </div>
 
             <h5 class="font-20px white-color"><span class="font-100"></span><a
-                    href="{{ url('desa-wisata') }} "class="btn btn-info">Dashboard</a><a
-                    href="{{ url("fasilitas/$fasilitas->id_kategori_fasilitas") }}"class="btn btn-success"> Kembali</a>
+                    href="{{ url('desa-wisata') }} "class="btn btn-info">Halaman Utama</a><a
+                    href="{{ url("fasilitas/$fasilitas->id_kategori_fasilitas") }}"class="btn btn-success">Kembali</a>
             </h5>
         </div>
     </section>

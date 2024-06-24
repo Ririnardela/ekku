@@ -21,6 +21,7 @@
                                 <th class="text-center">Nama Penanggung Jawab</th>
                                 <th class="text-center">Jabatan</th>
                                 <th class="text-center">Akun Sosial Media</th>
+                                <th class="text-center">Status PBL</th>
                                 <th class="text-center">Foto</th>
 
                             </tr>
@@ -45,6 +46,7 @@
                                         <a href="{{ $kontak_wisata->link_fb }}"><span class="lab la-facebook-f mr-2 text-secondary font-22 align-middle"></span></a>
                                         <a href="{{ $kontak_wisata->link_ig }}"><span class="lab la-instagram mr-2 text-secondary font-22 align-middle"></span></a>
                                     </td>
+                                    <td class="text-center">{{ $kontak_wisata->status }}</td>
                                     <td class="text-center">
 
                                         <img src="{{ url("public/$kontak_wisata->foto") }}" class="rounded" style="object-fit: cover; position: static; width: 50%; height: 200px;">

@@ -1,4 +1,24 @@
 <x-web>
+
+
+    @push('style')
+        <style>
+            .rekomen{
+            border: 1px solid rgb(233, 228, 228); /* Mengubah dari 1rem ke 3px untuk ketebalan yang wajar */
+            background-color: transparent;
+            padding: 0.5rem;
+            border-radius: 5px;
+            }
+           
+            
+            .rekomen:hover{
+                background-color: rgb(29, 163, 253);
+                padding: 0.5rem !important;
+                border-radius: 5px;
+                
+            }
+        </style>
+    @endpush
     @include('menu.menu')
     <div class="remove-padding transition-none" id="home">
         <div id="rev_slider_1078_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
@@ -14,7 +34,7 @@
                         data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
                         data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ url('public/web') }}/assets/images/3.jpg" alt=""
+                        <img src="{{ url('public/web') }}/assets/images/masjid.jpg); height: 700px;" alt=""
                             data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                             data-bgparallax="10" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
@@ -22,14 +42,14 @@
                         <!-- LAYER NR. 1 -->
                         <div class="hero-text-wrap">
                             <center>
-                                <h3 style="color: white; font-weight:10px; margin-top:30vh"></h3>
+                                <h3 style="color: white; font-weight:10px; margin-top:50vh"></h3>
                                 {{-- <img src="{{ url('public/web') }}/assets/images/logo-putih.png" alt=""
                                     style="width:50%; height:auto; object-fit: cover; "> --}}
-                                <img src="{{ url('public/web') }}/assets/images/kku-white.png"
+                                <img src="{{ url('public/web') }}/assets/images/ekku11.png"
                                     style="width:70%; height:auto; object-fit: cover;" alt="">
                             </center>
                         </div>
-
+                            
                     </li>
                 </ul>
                 <div class="tp-bannertimer" style="height: 3px; background-color: rgba(255, 255, 255, 0.25);">
@@ -56,14 +76,16 @@
                                         <div class="date-box">
                                             <span class="day">
                                                 @if ($atraksi_wisata->rekomendasi == 2)
-                                                    <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}"
-                                                        class="btn btn-light">
-                                                        <strong style="font-size: 15px; font-weight:bold;">
-                                                            <i style="color: blue">
-                                                                Rekomendasi</a>
+                                                    <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}" class="rekomen">
+                                                        <strong style="font-size: 13px; font-weight: bold; color: #fff;">
+                                                            REKOMENDASI
+                                                        </strong>
+                                                    </a>
                                                 @elseif ($atraksi_wisata->rekomendasi == 1)
+                                                    <!-- Optionally, you can handle other conditions here -->
                                                 @endif
                                             </span>
+                                            
                                         </div>
                                         <div class="item">
                                             <a href="{{ url("atraksi-wisata/$atraksi_wisata->id") }}">
